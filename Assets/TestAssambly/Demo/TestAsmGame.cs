@@ -1,11 +1,9 @@
 using UnityEngine;
 
-namespace Demo
+namespace TestAssambly
 {
-    public class TestObject : MonoBehaviour
+    public class TestAsmGame : MonoBehaviour
     {
-        public TestModel testModel;
-
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
@@ -15,11 +13,8 @@ namespace Demo
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.D))
-            {
-                gameObject.SetActive(false);
-                Destroy(gameObject);
-            }
+
         }
     }
 }
+
