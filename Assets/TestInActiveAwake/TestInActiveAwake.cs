@@ -21,9 +21,24 @@ public class TestInActiveAwake : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // 物件 active 情況
         if (Input.GetKeyDown(KeyCode.A))
         {
-            var g = Instantiate(go, scene);
+            go.SetActive(true);
+            GameObject g = Instantiate(go, scene) as GameObject;
+            Debug.Log(g.scene.name);
+        }
+        // 物件 inactive 情況
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            go.SetActive(false);
+            GameObject g = Instantiate(go, scene) as GameObject;
+            Debug.Log(g.scene.name);
+        }
+        // 測試有指定場景跟沒指定場景
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            Instantiate(go, scene);
             Instantiate(go);
         }
     }
